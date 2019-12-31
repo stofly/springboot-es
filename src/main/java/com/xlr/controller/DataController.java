@@ -83,6 +83,6 @@ public class DataController {
     private static class Param {
         private String type;
         private String keyword;
-    }
 
+    }
 }

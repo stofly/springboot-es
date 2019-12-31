@@ -11,6 +11,7 @@ import java.util.List;
  * @author sixkery
  * @date 2019/11/24
  */
+//两个参数分别为对应实体，以及实体主键数据类型
 public interface MysqlBlogRepository extends JpaRepository<MysqlBlog, Integer> {
 
     /**

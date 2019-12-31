@@ -1,40 +1,39 @@
 server:
   port: 8081
 spring:
-  #Êı¾İ¿âÅäÖÃ
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: root
-    # hikari Êı¾İÔ´×¨ÓÃÅäÖÃ
     hikari:
       maximum-pool-size: 20
       minimum-idle: 5
 
-  # jpa Ïà¹ØÅäÖÃ
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-    # Êı¾İ¿â·½ÑÔ
     database-platform: org.hibernate.dialect.MySQLDialect
 
-  # es ÅäÖÃ
+  # es é…ç½®
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 127.0.0.1:9300
 
-
-  # mvc ¾²Ì¬×ÊÔ´Ó³Éä
+  # mvc é™æ€èµ„æºæ˜ å°„
   mvc:
     static-path-pattern: /**
 
-  # ¾²Ì¬×ÊÔ´ÈÈ²¿Êğ
+  # é™æ€èµ„æºçƒ­éƒ¨ç½²
   devtools:
     livereload:
       enabled: true
     restart:
       additional-paths: static/**
 
-  # ÈÕÆÚ¸ñÊ½»¯
+  # æ—¥æœŸæ ¼å¼è½¬æ¢
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
 
